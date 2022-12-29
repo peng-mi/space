@@ -10,11 +10,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>Peng's Blog</title>
       </Head>
       <nav>
-        <Link href="/">/home</Link>
+        <Link href="/">Home</Link>
       </nav>
       <Component {...pageProps} />
     </div>
-  );
+  )
 }
 
 export default MyApp;
