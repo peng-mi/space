@@ -1,0 +1,31 @@
+---
+title: Everything about Spark
+tags:
+   - spark
+date: Dec 30, 2022
+excerpt: Spark related terminology and all in one page
+---
+
+
+[Wechat link](https://mp.weixin.qq.com/s/_52XYTdsQjuiC5zNGvRkEw)
+
+Spark + Hadoop is the de-facto solutions for handling large datasets storage and analysis.
+
+In 2022， the main work is about deploying and managing in-house Spark + HDFS solutions of large scale logs and traces analysis.
+
+<h2>Spark vs Hadoop</h2>
+Spark is the replacement of MapReduce computing in Hadoop， while Haddop offers HDFS as storage solution.
+
+Spark vs Hadoop
+- Distributed computing solution -vs- basic platform offering computing, storage and orchestrion 
+- iterative and interactively computing -vs- batching processing
+- large memory requirements with better and more CPUs -vs- less requirements for hardware
+- RDD is used as middle result during computation in memory -vs- middle result in HDFS
+- Task is organized in thread with faster lauching time -vs- task is a process with slower launching time.
+
+<h2>Terminology</h2>
+1. Master-worker: a Spark cluster has multiple master and worker nodes.
+   - Master node manages worker nodes. Submitted job to master node, and master node dispatches tasks to worker nodes.
+   - Worker node accepts tasks from master node and manages executor process, which does the real work, and runs the codes in applications.
+   - Application: user defined Spark application codes. It includes Driver codes and codes running on Executors. 
+
