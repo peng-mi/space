@@ -17,13 +17,13 @@ interface MDXPost {
 
 export default function PostPage({ post }: { post: MDXPost }) {
   return (
-    <>
-      <Head>
-        <title>{post.meta.title}</title>
-      </Head>
-      <h1>{post.meta.title}</h1>
+    <div>
+    <h1 className="font-bold text-3xl mt-24 mb-12">{post.meta.title}</h1>
+    <time className="text-gray-500 italic">{post.meta.date}</time>
+    <p className="prose dark:prose-invert">
       <MDXRemote {...post.source} components={{ YouTube, Image }} />
-    </>
+    </p>
+  </div>
   );
 }
 

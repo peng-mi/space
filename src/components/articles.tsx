@@ -7,17 +7,20 @@ export default function Articles({ posts }: { posts: PostMeta[] }) {
     <ul className={styles.list}>
       {posts.map((post) => (
         <li key={post.slug}>
-          <div className={styles.title}>
-            <Link href={`/posts/${post.slug}`}>{post.title}</Link>
-          </div>
-          <p>{post.excerpt}</p>
-          <p className={styles.tags}>
+          <div className="my-4 py-4 border-b">
+            <div className={styles.title}>
+              <Link href={`/posts/${post.slug}`}>{post.title}</Link>
+            </div>
+            <time className="text-gray-400">{post.date}</time>
+            <p className="mt-4 italic">{post.excerpt}</p>
+            <p className={styles.tags}>
             {post.tags.map((tag) => (
               <Link key={tag} href={`/tags/${tag}`}>
                 {tag}
               </Link>
             ))}
           </p>
+          </div>
         </li>
       ))}
     </ul>

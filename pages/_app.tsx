@@ -1,18 +1,14 @@
 import type { AppProps } from "next/app";
-import Link from "next/link";
-import Head from "next/head";
 import "@/styles/globals.css";
+import Footer from "@/src/components/Footer";
+import Header from "@/src/components/Header";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div className="container">
-      <Head>
-        <title>Peng Blog</title>
-      </Head>
-      <nav>
-        <Link href="/">Home</Link>
-      </nav>
+    <div className="container mx-auto max-w-5xl flex flex-col min-h-screen px-4">
+      <Header />
       <Component {...pageProps} />
+      <Footer />
     </div>
   )
 }
