@@ -5,7 +5,6 @@ export default function Home({ posts }: { posts: PostMeta[] }) {
   return (
     <>
     <h1>Articles</h1>
-    <br />
     <Articles posts={posts} />
     </>
   );
